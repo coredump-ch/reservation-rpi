@@ -31,7 +31,7 @@ def get_reservations():
     r = requests.get(url, headers={'Authorization': 'Token ' + API_TOKEN})
     return r.json()
 
-lcd = CharLCD(0x27)
+lcd = CharLCD('PCF8574', 0x27)
 lcd.clear()
 
 lcd.create_char(0, SMILEY)
